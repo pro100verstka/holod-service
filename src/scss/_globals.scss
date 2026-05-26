@@ -1,0 +1,12 @@
+@use 'helpers' as *;
+
+body {
+  @include fluid-text(20, 16);
+  font-family: var(--font-family-body);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
