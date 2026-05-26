@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(16) rem(32);
+  border-radius: var(--border-radius);
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border: none;
+  white-space: nowrap;
+  font-size: rem(16);
+  font-weight: 700;
+}

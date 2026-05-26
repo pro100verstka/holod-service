@@ -4,4 +4,12 @@
 @use 'globals';
 
 
-
+@use 'blocks/header';
+@use 'blocks/logo';
+@use 'blocks/menu';
+@use 'blocks/phone-contact';
+@use 'blocks/burger-button';
+@use 'blocks/hero';
+@use 'blocks/feature-card';
+@use 'blocks/button';
+@use 'blocks/title';

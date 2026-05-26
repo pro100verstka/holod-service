@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.logo {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  &__icon {
+    height: fluid(45, 30);
+    width: fluid(45, 30);
+    color: var(--color-accent);
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  &__title {
+    @include fluid-text(22, 18);
+    font-weight: 700;
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  &__subtitle {
+    @include fluid-text(12, 10);
+  }
+}

@@ -1,0 +1,34 @@
+@use '../helpers' as *;
+
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(10);
+    min-height: var(--header-height);
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+  }
+
+  &__contact {
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+
+  &__burger-button {
+  }
+}
+
+
+
+
+
+
+
+

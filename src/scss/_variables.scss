@@ -2,17 +2,18 @@
 
 :root {
   --font-family-body: 'Inter', sans-serif;
-  --container-width: #{rem(1420)};
+  --container-width: #{rem(1280)};
   --container-padding-x: #{rem(15)};
+  --header-height: #{rem(80)};
 
   --color-light: #FFFFFF;
   --color-light-alt: #f8f8f8;
-  --color-dark: #1d1d1b;
+  --color-dark: #0F172A;
   --color-dark-alt: #393838;
   --color-grey: #67675f;
-  --color-accent: #27ae60;
+  --color-accent: #2563EB;
 
   --transition-duration: 0.2s;
 
-  --border-radius: #{rem(8)};
+  --border-radius: #{rem(10)};
 }
