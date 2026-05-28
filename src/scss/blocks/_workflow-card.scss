@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+
+.workflow-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(16);
+  padding-top: rem(50);
+
+  &:before {
+    counter-increment: workflow-counter;
+    content: counter(workflow-counter);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(30);
+    height: rem(30);
+    border-radius: 50%;
+    transform: translate(-50%);
+    border: rem(1) solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+  &__icon {
+    width: rem(88);
+    height: rem(88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    border-radius: rem(28);
+    background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(59,130,246,0.08));
+    svg {
+      width: rem(38);
+      height: rem(38);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    text-align: center;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+}

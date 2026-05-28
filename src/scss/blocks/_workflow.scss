@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.workflow {
+  &__title {
+    margin-bottom: rem(70);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: rem(24);
+    list-style: none;
+    counter-reset: workflow-counter;
+  }
+}
+

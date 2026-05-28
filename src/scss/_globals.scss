@@ -15,3 +15,29 @@ body {
 h1 {
   @include fluid-text(64, 42);
 }
+
+h2 {
+  @include fluid-text(42, 32);
+  position: relative;
+  text-align: center;
+  margin-bottom: fluid(70, 20);
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: rem(-20);
+    left: 50%;
+    height: rem(2);
+    width: rem(50);
+    transform: translateX(-50%);
+    background-color: var(--color-accent);
+  }
+}
+
+section {
+  padding-block: fluid(40, 20);
+}
+
+.none {
+  display: none;
+}
