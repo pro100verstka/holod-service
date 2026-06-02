@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.footer {
+  padding-block: fluid(30, 20);
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(20);
+  }
+
+  &__logo {
+  }
+
+  &__copyright {
+    @include fluid-text(18,12);
+    @include tablet {
+      flex: 1 0 100%;
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  &__socials {
+  }
+}
+
+

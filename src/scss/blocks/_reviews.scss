@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.reviews {
+  &__inner {
+  }
+
+  &__title {
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+    margin-bottom: rem(20);
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+    .swiper-pagination-bullet {
+      @include square(rem(10));
+      &-active {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}
+
