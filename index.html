@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Холод Сервис</title>
-    <script type="module" crossorigin src="/holod-service/assets/index-Cgo67gyz.js"></script>
-    <link rel="stylesheet" crossorigin href="/holod-service/assets/index-B1U3ZyBt.css">
+    <script type="module" crossorigin src="/holod-service/assets/index-DxHPl9F2.js"></script>
+    <link rel="stylesheet" crossorigin href="/holod-service/assets/index-Bb9IXro6.css">
   </head>
   <body>
     <header class="header">
@@ -80,7 +80,7 @@
               Быстро устраним неисправность любой сложности.
               Бесплатный выезд мастера, оригинальные запчасти и гарантия до 2 лет.
             </p>
-            <button class="hero__button button">Оставить заявку</button>
+            <button class="hero__button button open-modal">Оставить заявку</button>
             <div class="hero__features">
               <div class="feature-card">
                 <div class="feature-card__icon">
@@ -147,7 +147,7 @@
                 <h3 class="service-card__title title">Ремонт компрессора</h3>
                 <p class="service-card__description">Устраняем шум, перегрев и проблемы с запуском компрессора</p>
               </div>
-              <a class="service-card__link button" href="/">
+              <a class="service-card__link button open-modal" href="/">
                 Подробнее
               </a>
             </article>
@@ -181,7 +181,7 @@
                 <h3 class="service-card__title title">Замена термостата</h3>
                 <p class="service-card__description">Настроим корректную работу температуры и охлаждения</p>
               </div>
-              <a class="service-card__link button" href="/">
+              <a class="service-card__link button open-modal" href="/">
                 Подробнее
               </a>
             </article>
@@ -204,7 +204,7 @@
                 <h3 class="service-card__title title">Устранение утечки фреона</h3>
                 <p class="service-card__description">Найдем и устраним утечку, заправим систему фреоном</p>
               </div>
-              <a class="service-card__link button" href="/">
+              <a class="service-card__link button open-modal" href="/">
                 Подробнее
               </a>
             </article>
@@ -227,7 +227,7 @@
                 <h3 class="service-card__title title">Ремонт морозильной камеры</h3>
                 <p class="service-card__description">Устраняем проблемы с заморозкой и работой морозильной камеры</p>
               </div>
-              <a class="service-card__link button" href="/">
+              <a class="service-card__link button open-modal" href="/">
                 Подробнее
               </a>
             </article>
@@ -250,7 +250,7 @@
                 <h3 class="service-card__title title">Диагностика неисправностей</h3>
                 <p class="service-card__description">Проводим точную диагностику холодильников всех моделей</p>
               </div>
-              <a class="service-card__link button" href="/">
+              <a class="service-card__link button open-modal" href="/">
                 Подробнее
               </a>
             </article>
@@ -629,6 +629,7 @@
                   class="form__input"
                   type="text"
                   placeholder="Ваше имя"
+                  required
                 />
               </div>
               <div class="form__phone">
@@ -636,6 +637,7 @@
                   class="form__input"
                   type="tel"
                   placeholder="Телефон"
+                  required
                 />
               </div>
               <button class="form__button button">Вызвать мастера</button>
@@ -724,5 +726,40 @@
         </ul>
       </div>
     </footer>
+  <div class="modal" id="application-modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button">×</button>
+      <h2 class="modal__title title">Оставить заявку</h2>
+      <form
+        action="#"
+        class="form"
+      >
+        <div class="form__name">
+          <input
+            class="form__input"
+            type="text"
+            placeholder="Ваше имя"
+            required
+          />
+        </div>
+        <div class="form__phone">
+          <input
+            class="form__input"
+            type="tel"
+            placeholder="Телефон"
+            required
+          />
+        </div>
+        <button class="form__button button" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="success-popup">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <span>✅ Заявка отправлена</span>
+    </div>
+  </div>
   </body>
 </html>
