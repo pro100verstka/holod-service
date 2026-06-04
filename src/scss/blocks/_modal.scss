@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(20);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-duration);
+  z-index: 1000;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    .modal__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15,23,42,.85);
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: rem(500);
+    padding: fluid(40, 20);
+    transform: translateY(30px);
+    background-color: rgba(255,255,255,.95);
+    backdrop-filter: blur(20px);
+    border-radius: rem(32);
+    box-shadow: 0 25px 80px rgba(15,23,42,.18);
+    transition: var(--transition-duration);
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__close {
+    @include square(rem(40));
+    position: absolute;
+    top: fluid(20, 10);
+    right: fluid(20, 10);
+    font-size: rem(24);
+    line-height: 1;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #F1F5F9;
+    transition: var(--transition-duration);
+    @include hover {
+      background-color: #E2E8F0;
+    }
+  }
+
+  &__title {
+    @include fluid-text(48, 24);
+    margin-bottom: rem(40);
+  }
+}

@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,4 +13,24 @@
   white-space: nowrap;
   font-size: rem(16);
   font-weight: 700;
+  overflow: hidden;
+  transition: var(--transition-duration);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: left .6s ease;
+  }
+
+  @include hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15), 0 5px 10px rgba(0, 0, 0, .1);
+    &:before {
+      left: 150%;
+    }
+  }
 }
